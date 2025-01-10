@@ -18,8 +18,8 @@ public class Launcher {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistenceUnits.lab02");
 
-//        init_1(emf.createEntityManager());
-//        lookup_1(emf.createEntityManager());
+        init_1(emf.createEntityManager());
+        lookup_1(emf.createEntityManager());
 
         init_2(emf.createEntityManager());
         lookup_2(emf.createEntityManager());
@@ -38,7 +38,6 @@ public class Launcher {
         em.getTransaction().begin();
 
         Department_1 department = new Department_1();
-        department.setId(1);
         department.setCompanyName("Luxoft");
         department.setDepartmentName("IT");
         department.setDescription("Information Technology department");
