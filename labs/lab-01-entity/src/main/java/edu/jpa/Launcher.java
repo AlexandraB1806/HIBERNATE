@@ -20,7 +20,6 @@ public class Launcher {
         // start transaction
         em.getTransaction().begin();
 
-
         Company company = new Company();
         company.setId(1);
         company.setName("Company #1");
@@ -32,7 +31,6 @@ public class Launcher {
         company.setName("Company #2");
         company.setAddress("Company #2 address");
         em.persist(company);
-
 
         // commit transaction
         em.getTransaction().commit();
