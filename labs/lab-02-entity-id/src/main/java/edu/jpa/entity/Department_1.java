@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Department_1 {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private int id;
 
     private String companyName;
