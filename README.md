@@ -37,3 +37,19 @@ persisted as a part of entity
 used as identity for this entity & entity class should contain fields with the same names
 as in the class DepartmentKey.
    - @Id
+
+
+                        Exercise 3 - Entities relations definition
+
+There are the following entities:
+- Company;
+- Department;
+- Employee: contains collection of Project objects (Project is not an entity).
+
+Bidirectional:
+- Company - Department (1:M)
+- Department - Company (M:1)
+- Department - Employee (1:M)
+- Employee - Department (M:1)
+
+Example4 & Example7 (for ElementCollection) from labguide are useful.
