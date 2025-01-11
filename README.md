@@ -39,7 +39,7 @@ as in the class DepartmentKey.
    - @Id
 
 
-                        Exercise 3 - Entities relations definition
+                                Exercise 3 - Entities relations definition
 
 There are the following entities:
 - Company;
@@ -53,3 +53,27 @@ Bidirectional:
 - Employee - Department (M:1)
 
 Example4 & Example7 (for ElementCollection) from labguide are useful.
+
+
+                                    Exercise 4 - Entities class hierarchy
+                                    (Map the OO model to relational model)
+
+3 domain objects:
+- Customer
+- Employee
+- Executive
+
+Common parent class: Person (id, name -> to share)
+
+1. Single Table Per Class Hierarchy -> InheritanceType.SINGLE_TABLE
+- Example11 for inspo
+- Result: Only 1 created table: Person, which has: id (PK), name, salary, bonus,
+discount and type (Customer, Employee, Executive) columns; noticed the nullable
+ones.
+
+2. Table per Concrete Class Strategy -> InheritanceType.TABLE_PER_CLASS
+- Example13 for inspo
+- Used @MappedSuperclass - template
+
+3. Joined Subclass Strategy -> InheritanceType.JOINED
+- Example12 for inspo

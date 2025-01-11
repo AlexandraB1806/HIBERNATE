@@ -2,6 +2,9 @@ package edu.jpa.TABLE_PER_HIERARCHY.entity;
 
 import jakarta.persistence.*;
 
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
 public abstract class Person {
     @Id
     private int id;
